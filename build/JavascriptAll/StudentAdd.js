@@ -12,6 +12,26 @@ const submitbtn = document.querySelector('#submitBtn');
 let Rank = 0;
 let examyear = selectExamYear.value;
 let course = selectCourseInput.value;
+
+function updateYearOptions() {
+  // const selectExamYear = document.getElementById('selectExamYear');
+  const currentYear = new Date().getFullYear();
+  const startYear = 2017;  // Starting year
+  const endYear = currentYear;  // Ending year (current year)
+  // Clear any existing options
+  selectExamYear.innerHTML = '';
+
+  // Loop to add options dynamically
+  for (let year = startYear; year <= endYear; year++) {
+      const option = document.createElement('option');
+      option.value = year;
+      option.textContent = year;
+      if (year === currentYear) {
+        option.selected = true;
+    }
+      selectExamYear.appendChild(option);
+  }
+}
 const updateData = async ({ name, cgpa }, id) => {
   const formdata = new FormData();
   formdata.append("name", name);
@@ -344,4 +364,5 @@ function sortStudent(tbody) {
   // console.log(studentArr);
 }
 
+window.onload=updateYearOptions()
 renderData();
