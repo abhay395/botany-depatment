@@ -34,7 +34,7 @@ const renderData = async () => {
     if (!data || data.length === 0) {
       rsContainer.innerHTML = `
     <div class="col-12 text-center">
-      <p class="text-muted">No Research data available at the moment.</p>
+      <p class="text-muted" style='height: 70vh'>No Research data available at the moment.</p>
     </div>`;
       return null; 
     }

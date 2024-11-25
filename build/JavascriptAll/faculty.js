@@ -10,7 +10,7 @@ function hideLoader() {
 function displayNoDataMessage() {
   facultyData.innerHTML = `
     <div class="col-12 text-center">
-      <p class="text-muted">No faculty data available at the moment.</p>
+      <p class="text-muted" style='height: 70vh'>No faculty data available at the moment.</p>
     </div>`;
 }
 

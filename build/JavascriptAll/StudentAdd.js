@@ -186,9 +186,9 @@ const renderData = async () => {
     tableArray.forEach((table) => {
       const div = document.createElement("div");
       div.id = `year${year}`;
-      const h1 = document.createElement("h1");
-      h1.innerHTML = `${year} Year Student`;
-      div.appendChild(h1);
+      const h4 = document.createElement("h4");
+      h4.innerHTML = `${year} Year Student`;
+      div.appendChild(h4);
       div.appendChild(table);
       year++;
       StudentSecition.appendChild(div);
@@ -211,8 +211,8 @@ function createRow(data, rank = 0) {
     <td id="cgpa">${safeText(data.cgpa.toString())}</td>
     <td id="rank">${safeText(rank.toString())}</td>
     <td>
-      <button class="EditBtn">Edit</button>
-      <button class="DeleteBtn">Delete</button>
+      <button class="EditBtn btn btn-warning btn-sm edit-button">Edit</button>
+      <button class="DeleteBtn btn btn-danger btn-sm edit-button">Delete</button>
     </td>
   `;
 
